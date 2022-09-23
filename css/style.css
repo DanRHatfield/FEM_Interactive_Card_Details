@@ -1,0 +1,288 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body * {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+main {
+  display: flex;
+  background: url(../images/bg-main-desktop.png) no-repeat;
+  width: 1440px;
+  height: 900px;
+}
+
+#leftSide, #rightSide {
+  display: inline-block;
+    width: 49%;
+    margin: 0;
+}
+
+#topCard, #bottomCard {
+  width: 447px;
+  height: 245px;
+  border-radius: 0.7em;  
+}
+
+#topCard {
+  background-image: url(../images/bg-card-front.png);
+  margin: 190px 0 40px 150px;
+  color: white;
+}
+
+#inside {
+  padding: 30px;
+}
+
+#card_number {
+  margin: 57px 0 25px 0;
+  font-size: 1.5em;
+}
+
+#cardholder_name {
+  font-size: 0.8em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#topCard_bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+#bottomCard {
+  background-image: url(../images/bg-card-back.png);
+  margin: 0px 0 110px 260px;
+  box-shadow: -25px 16px 100px -20px black;
+}
+
+#cvc {
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+  color: white;
+  width: 88%;
+  font-size: 0.8em;
+  letter-spacing: 2px;
+  align-items: center;
+}
+
+.theForm, .thankYou {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 260px 110px
+}
+
+.thankYou {
+  align-items: center;
+  margin: 310px 110px
+}
+
+label {
+  display: inline-block;
+  margin: 25px 0 10px 0;
+  font-size: 0.65em;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: hsl(278, 68%, 11%);
+}
+
+.medium {
+  width: 42%;
+}
+
+.long {
+  width: 100%;
+}
+
+input {
+  border-radius: 0.5em;
+  height: 45px;
+  border: 2px hsl(270, 3%, 87%) solid;
+  text-indent: 10px;
+  opacity: 50%;
+  cursor: pointer;
+}
+
+input:focus {
+  border-image: linear-gradient(to left,hsl(249, 99%, 64%),hsl(278, 94%, 30%));
+}
+
+.input_block {
+  display: block;
+  width: 100%;
+}
+
+.input_medium {
+  display: inline-block;
+  width: 230px;
+}
+
+.input_short {
+  display: inline-block;
+  width: 22%;
+  margin: 0 1% 0 0;
+}
+
+#confirm, #continue {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: 0.5em;
+  color: white;
+  background: hsl(278, 68%, 11%);
+  height: 55px;
+  margin: 25px 0 0 0;
+  cursor: pointer;
+}
+
+#continue {  
+  margin: 50px 0 0 0;
+}
+
+.grey {
+  color: hsl(279, 6%, 55%);
+}
+
+.warning {
+  font-size: 0.5em;
+  color: hsl(0, 100%, 66%);
+  margin: 5px 0 0 4px;
+}
+
+.error {
+  border: 2px hsl(0, 100%, 66%) solid;
+}
+
+.large_text {
+  font-size: 1.5em;
+  letter-spacing: 4px;
+  margin: 30px 0 15px 0;
+}
+
+.container {
+  display: flex;
+}
+.vert {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px 0 0
+}
+
+.input_short {
+  width: 75px;
+}
+
+
+.attribution {
+  margin: 20px 0 0 0;
+  font-size: 0.8em;
+}
+
+.attribution a {
+  font-size: 1em;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+@media screen and (max-width: 1055px) {
+  main {
+    display: flex;
+    background: url(../images/bg-main-mobile.png) top no-repeat;
+    width: 375px;
+    flex-direction: column;
+  }
+
+  #leftSide, #rightSide {
+    width: auto;
+    border: none;
+  }
+  #topCard, #bottomCard {
+    position: relative;
+    width: 290px;
+    height: 159px;
+    border-radius: 0.7em;
+  }
+
+  #topCard {
+    background-image: url(../images/bg-card-front.png);
+    margin: 125px 0 0px 15px;
+    color: white;
+    background-size: 290px;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+
+  #inside {
+    padding: 20px;
+  }
+
+  #card_number {
+    margin: 30px 0 20px 0;
+    font-size: 0.9em;
+    letter-spacing: 3px;
+  }
+
+  #cardLogo {
+    width: 45%;
+  }
+
+  #bottomCard {
+    margin: -250px 0 89px 70px;
+    background-size: 290px;
+  }
+
+  #cardholder_name, #exp_date {
+    font-size: 0.55em;
+  }
+
+  #month, #year {
+    font-size: 1em;
+  }
+
+  .theForm, .thankYou {
+    display: flex;
+    flex-direction: column;
+    width: 325px;
+    margin: 10px 25px;
+  }
+
+  .thankYou {
+    margin: 40px 25px;
+  }
+
+  #cvc {
+    font-size: 0.5em;
+  }
+
+  .attribution {
+    display: none;
+  }
+
+  .normal {
+    border: 2px lightgrey solid;
+  }
+
+  .input_medium {
+    width: 155px
+  }
+  
+  .hidden {
+    display: none;
+  }
+}

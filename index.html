@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="stylesheet" href="css/style.css">
+  
+</head>
+<body>
+  <main>
+    <section id="leftSide">
+      <section id="topCard">
+        <div id="inside">
+          <div id="cardLogo"><img src="images/card-logo.svg" id="cardLogo"></div>
+          <div id="card_number">0000 0000 0000 0000</div>
+          <div id="topCard_bottom">
+            <div id="cardholder_name" class="smallText">JANE APPLESEED</div>
+            <div id="exp_date">
+              <span id="month">00</span>/<span id="year">00</span></div>
+          </div>
+        </div>
+      </section>
+      <section id="bottomCard">  
+        <div id="cvc" class="smallText">000</div>
+      </section>
+    </section>
+
+  <section id="rightSide">
+    <section class="theForm">
+      <label class="long">CARDHOLDER NAME</label>  
+      <input type="text" placeholder="e.g. Jane Appleseed" class="input_block" id="cardholder">
+      
+      <label class="long">CARD NUMBER</label>
+      <input type="text" placeholder="e.g. 1234 5678 9123 0000" class="input_block" id="cardnum" maxlength="19">  
+      <span class="cardnum_warning hidden warning">Wrong format, numbers only</span>
+
+      <div>
+        <label class="medium">EXP. DATE (MM/YY)</label>
+        <label class="medium">CVC</label>
+      </div>
+      <div class="container">
+        <div class="vert">
+          <input type="text" placeholder="MM" class="input_short" id="MM" maxlength="2">
+          <span class="month_warning hidden warning">Can't be blank</span>
+        </div>
+        <div class="vert">
+          <input type="text" placeholder="YY" class="input_short" id="YY" maxlength="2">
+          <span class="year_warning hidden warning">Can't be blank</span>
+        </div>
+        <div class="vert">
+          <input type="text" placeholder="e.g. 123"  class="input_medium" id="CVC" maxlength="3">
+          <span class="cvc_warning hidden warning">Can't be blank</span>
+        </div>
+      </div>
+      <div>
+        <span class="month_warning hidden warning">Can't be blank</span>
+        <span class="year_warning hidden warning">Can't be blank</span>
+        <span class="cvc_warning hidden warning">Can't be blank</span>
+      </div>
+      <div id="confirm">Confirm</div>
+    </section>
+    <section class="thankYou hidden">
+        <!-- Completed state start -->
+        <div><img src="images/icon-complete.svg"></div>
+        <div class="large_text">THANK YOU!</div>
+        <div class="grey">We've added your card details</div>
+        <div id="continue">Continue</div>      
+        
+    </section>
+  </section>
+  </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Dan Hatfield</a>.
+  </div>
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
