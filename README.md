@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.png)
+![](https://danrhatfield.github.io/FEM_Interactive_Card_Details/images/screenshot.png)
 
 ### Links
 
